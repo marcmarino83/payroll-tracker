@@ -3,13 +3,27 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-  const employeeInfo =
-  employeeFirstName = prompt("Please Enter Your First Name")
-  employeeLastName = prompt("Please Enter Your Last Name")
-  employeeSalary = prompt("Please Enter Your Salary")
-  console.log(employeeInfo)
+  
+let test = true
+let employeeList = []
 
-    
+while (test){
+let employeeFirstName = prompt("Please Enter Your First Name")
+let employeeLastName = prompt("Please Enter Your Last Name")
+let employeeSalary = prompt("Please Enter Your Salary")
+
+let empobj = {
+    FirstName: employeeFirstName,
+    lastName: employeeLastName,
+    salary: employeeSalary
+  }
+
+employeeList.push (empobj)
+test = confirm("Would you like to continue?")
+}
+
+console.log(employeeList)
+return employeeList;
 // dataType employeeInfo[] = new dataType[2]
 // TODO: Get user input to create and return an array of employee objects
 }
@@ -18,6 +32,7 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   
+  console.log(employeesArray)
 
   // TODO: Calculate and display the average salary
 }
@@ -93,3 +108,35 @@ const trackEmployeeData = function() {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
+
+
+// // Function Definition
+// // Parameters --> num1, num2
+// function sum(num1, num2){
+
+// }
+
+// // Function Call
+// sum(100, 200)
+
+// let userList = [
+//   {
+//     name: "Daniel",
+//     age: 27
+//   },
+//   {
+//     name: "John",
+//     age: 35
+//   }
+// ]
+
+// let allAgeSum = 0
+
+// for (let i = 0; i < userList.length; i++) {
+//   allAgeSum = allAgeSum + userList[i].age
+//   console.log(allAgeSum);
+// }
+
+
+
+// console.log();
